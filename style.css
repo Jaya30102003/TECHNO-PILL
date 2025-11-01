@@ -293,9 +293,21 @@ body {
 /* LEFT LAYOUT */
 .about-left {
   flex: 1;
-  background: url('assets/images/about-bg.jpg') no-repeat center center/cover;
+  background: url('assets/images/IT.gif') no-repeat center center/cover;
+  display: flex;              /* centers the image */
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;        /* light grey background behind image */
   min-height: 500px;
 }
+
+.about-left img {
+  width: 100%;                 /* adjust image size here (try 60–80%) */
+  height: auto;
+  border-radius: 10px;        /* optional: soft rounded edges */
+  object-fit: contain;        /* prevents image distortion */
+}
+
 
 /* RIGHT LAYOUT */
 .about-right {
