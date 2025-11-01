@@ -302,7 +302,7 @@ body {
 }
 
 .about-left img {
-  width: 100%;                 /* adjust image size here (try 60–80%) */
+  width: 80%;                 /* adjust image size here (try 60–80%) */
   height: auto;
   border-radius: 10px;        /* optional: soft rounded edges */
   object-fit: contain;        /* prevents image distortion */
