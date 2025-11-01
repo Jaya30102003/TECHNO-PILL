@@ -47,33 +47,11 @@ prevBtn.addEventListener('click', () => {
 window.addEventListener('resize', updateTrack);
 updateTrack();
 
-
-const form = document.getElementById("contactForm");
-const responseText = document.getElementById("formResponse");
-
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const formData = new FormData(form);
-  const data = new URLSearchParams(formData);
-
-  try {
-    const res = await fetch("https://script.google.com/macros/s/AKfycbx1Pb7-OdE77qRhVUJda2f8C7C4qST0bw-t97n_TxYZ5FlY_xC62w7w51RSkkX445PvwA/exec", { // Replace with your Web App URL
-      method: "POST",
-      body: data
-    });
-
-    const result = await res.json();
-
-    if (result.result === "success") {
-      responseText.textContent = "Thank you! Your message has been sent.";
-      form.reset();
+window.addEventListener("scroll", function() {
+    const header = document.querySelector(".header");
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
     } else {
-      responseText.textContent = "Oops! Something went wrong. Try again.";
-      console.error(result.error);
+      header.classList.remove("scrolled");
     }
-  } catch (err) {
-    responseText.textContent = "Error connecting to server.";
-    console.error(err);
-  }
-});
+  });
