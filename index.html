@@ -31,7 +31,7 @@
   <!-- ===== HERO ===== -->
   <section id="home" class="hero">
     <div class="hero-content">
-      <h2>Make life better by blending modern technology with creativity with us <br>
+      <h2>Make life better by blending modern technology and creativity with us <br>
         <span><h1>TECHNO PILL</h1></span>
       </h2>
       <p>Grow. We handle</p>
@@ -131,6 +131,21 @@
   <footer class="footer">
     <p>© 2025 TECHNO PILL. All rights reserved.</p>
   </footer>
+  <script>
+  const sections = document.querySelectorAll('section');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      } else {
+        entry.target.classList.remove('show');
+      }
+    });
+  }, { threshold: 0.2 }); // trigger when 20% of the section is visible
+
+  sections.forEach(section => observer.observe(section));
+</script>
 
   <script src="script.js"></script>
 </body>

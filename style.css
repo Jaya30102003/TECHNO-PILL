@@ -590,3 +590,16 @@ body {
   border-right: 6px solid transparent;
   border-top: 6px solid #ab1856;
 }
+
+/* === SECTION ANIMATION BASE === */
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+/* When visible */
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
