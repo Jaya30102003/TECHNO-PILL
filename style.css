@@ -262,12 +262,15 @@ body {
   color: #ffffff;
 }
 
-/* service cards layout */
 .service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centers last row */
   gap: 2rem;
-  margin-top: 2rem;
+}
+.service-card {
+  flex: 1 1 calc(33.333% - 2rem);
+  max-width: 300px;
 }
 
 /* service cards styling */
@@ -275,14 +278,17 @@ body {
   background: #6c7886; /* your grey palette color */
   padding: 2rem;
   border-radius: 12px;
-  border-top: 5px solid #ab1856; /* your accent color */
+  border-top: 5px solid #103e89; /* your accent color */
   color: #ffffff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  flex: 1 1 calc(33.333% - 2rem);
+  max-width: 300px;
 }
 
 .service-card:hover {
   transform: translateY(-5px);
+  border-top: 5px solid #103e89; /* your accent color */
   background: #ab1856; /* pink accent on hover */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
 }
