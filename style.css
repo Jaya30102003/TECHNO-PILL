@@ -33,7 +33,7 @@ body {
 
 /* ===== HEADER ===== */
 .header {
-  background: rgba(108, 120, 134, 0.4); /* translucent grey */
+  background: rgba(138, 147, 161, 0.4); /* translucent grey */
   backdrop-filter: blur(8px);
   color: #ffffff;
   position: fixed;
@@ -734,4 +734,26 @@ section.show {
 
 .brand-text .pink {
   color: #ab1856;
+}
+
+.hero {
+  position: relative;
+  padding: 5rem 0; /* remove the header height offset */
+  color: #efefef;
+  text-align: left;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  margin-top: 0; /* ensure no gap */
+}
+
+body {
+  margin: 0;
+  padding-top: 70px; /* keeps space for fixed header only */
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 100px; /* extra for mobile header */
+  }
 }
