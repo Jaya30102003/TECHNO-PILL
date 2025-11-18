@@ -757,3 +757,6 @@ body {
     padding-top: 100px; /* extra for mobile header */
   }
 }
+.section {
+  will-change: opacity, transform;
+}
